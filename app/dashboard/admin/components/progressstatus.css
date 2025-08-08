@@ -1,0 +1,46 @@
+.billing-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.progress-bar-container {
+  width: 100px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: lightgreen;
+  transition: width 0.3s ease;
+}
+
+.fraction-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none; /* Prevents blocking the hover */
+  opacity: 1;
+}
+
+/* .progress-bar:hover .fraction-hover {
+  opacity: 1;
+} */
+
+.progress-bar:hover .progress-fill {
+  background-color: lightgreen; /* Keeps bar visible while hovering */
+}

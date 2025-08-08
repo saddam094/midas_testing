@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* app/globals.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Add this to your global CSS file */
+@layer utilities {
+  .sheet-enter {
+    @apply transform translate-y-full transition-transform duration-300;
+  }
+  .sheet-enter-active {
+    @apply transform translate-y-0;
+  }
+  .sheet-exit {
+    @apply transform translate-y-0 transition-transform duration-300;
+  }
+  .sheet-exit-active {
+    @apply transform translate-y-full;
+  }
+  .selectable-content {
+    user-select: text;
+  }
+}
